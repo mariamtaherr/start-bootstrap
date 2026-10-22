@@ -1,0 +1,379 @@
+/* Main settings */
+:root {
+  --primary: #2937f0;
+  --pink: #da1c8b;
+  --text: #212529;
+  --muted: #8b9299;
+  --light-bg: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  min-height: 64px;
+  padding: 0;
+  background-color: #fff;
+}
+
+.navbar .container {
+  max-width: 1320px;
+}
+
+.navbar-brand {
+  color: var(--primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.navbar-brand:hover {
+  color: var(--primary);
+}
+
+.navbar-nav {
+  gap: 8px;
+}
+
+.nav-link {
+  padding: 1.25rem 0.4rem !important;
+  color: #6c757d;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* Section 1: Hero */
+.hero-section {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-container {
+  max-width: 1320px;
+  padding-top: 42px;
+  padding-bottom: 48px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 5px 9px;
+  border-radius: 5px;
+  color: #fff;
+  background: linear-gradient(105deg, var(--primary), var(--pink));
+  font-size: 0.72rem;
+  line-height: 1.1;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.hero-intro {
+  margin: 0 0 2px;
+  color: #9ba1a8;
+  font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.hero-content h1 {
+  margin: 0;
+  background: linear-gradient(110deg, var(--primary) 12%, var(--pink) 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: clamp(2.8rem, 4.1vw, 4.4rem);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.hero-buttons .btn {
+  min-width: 158px;
+  padding: 13px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.hero-buttons .btn-primary {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: #1e2bd0;
+  --bs-btn-hover-border-color: #1e2bd0;
+}
+
+.hero-buttons .btn-outline-dark {
+  --bs-btn-color: #212529;
+  --bs-btn-border-color: #212529;
+  --bs-btn-hover-bg: #212529;
+  --bs-btn-hover-border-color: #212529;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.portrait-scene {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 475px;
+  margin-left: auto;
+}
+
+.gradient-shape {
+  position: absolute;
+  top: 50px;
+  left: 10%;
+  width: 80%;
+  height: 500px;
+  z-index: 0;
+  border-radius: 145px 145px 155px 145px;
+  background: linear-gradient(135deg, #2735f3 5%, #7726c7 55%, #dc1d8b 100%);
+}
+img{
+    position: absolute;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.hero-person { position: absolute; z-index: 3; bottom: 0; left: 17%; width: 70%; height: 500px; object-fit: contain; object-position: center bottom; border-radius: 0; mix-blend-mode: normal; }
+.dots {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(2, 18px);
+  gap: 5px 5px;
+}
+
+.dots span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.dots-left {
+  top: 400px;
+  left: 5%;
+}
+
+.dots-middle {
+
+  top: 370px;
+  left: 12%;
+}
+
+.dots-middle span {
+  background: #fff;
+}
+
+.dots-right {
+  top: 80px;
+  right: 5%;
+}
+
+.dots-right span {
+  background: var(--primary);
+}
+
+/* Section 2: About */
+.about-section {
+  padding: 82px 0 54px;
+  background: var(--light-bg);
+}
+
+.about-section h2 {
+  margin-bottom: 8px;
+  background: linear-gradient(110deg, var(--primary), var(--pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.about-subtitle {
+  margin-bottom: 24px;
+  color: #9299a0;
+  font-size: 1rem;
+}
+
+.about-description {
+  max-width: 760px;
+  margin: 0 auto 22px;
+  color: #7d858d;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-links a {
+  color: #7928ca;
+  font-size: 1.7rem;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--pink);
+  transform: translateY(-3px);
+}
+@media (min-width: 1400px) { .portrait-scene { max-width: 760px; height: 510px; } .hero-person { width: 70%; height: 500px; left: 17%; } }
+/* Responsive layout */
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    gap: 0;
+    padding-top: 8px;
+  }
+
+  .nav-link {
+    padding: 9px 0 !important;
+  }
+
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    margin-top: 25px;
+  }
+
+  .portrait-scene {
+    margin: 0 auto;
+  }
+
+  .hero-person {
+    mix-blend-mode: normal;
+  }
+
+  .about-section {
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-container {
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+
+  .hero-badge {
+    font-size: 0.61rem;
+    margin-bottom: 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .hero-buttons .btn {
+    min-width: 125px;
+    padding: 11px 17px;
+  }
+
+  .portrait-scene {
+    height: 330px;
+  }
+
+  .gradient-shape {
+    top: 40px;
+    height: 250px;
+    border-radius: 100px 100px 110px 100px;
+  }
+
+  .hero-person {
+    height: 320px;
+    width: 63%;
+    left: 18%;
+  }
+
+  .dots {
+    grid-template-columns: repeat(2, 12px);
+    gap: 10px;
+  }
+
+  .dots span {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dots-left {
+    top: 55px;
+  }
+
+  .dots-middle {
+    top: 80px;
+  }
+
+  .dots-right {
+    top: 170px;
+  }
+
+  .about-section {
+    padding: 48px 18px 40px;
+  }
+
+  .about-description {
+    font-size: 0.88rem;
+  }
+}
